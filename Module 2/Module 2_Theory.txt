@@ -1,0 +1,41 @@
+Q.1.Explain the different data types available in Kotlin. How do val and var differ?
+
+Data Types in Kotlin:
+Kotlin has a variety of data types, which are categorized into primitive types and non-primitive types:
+
+1.Primitive Types (map directly to Java's primitive types):
+
+Int: 32-bit integer.
+Long: 64-bit integer.
+Float: 32-bit floating-point number.
+Double: 64-bit floating-point number.
+Short: 16-bit integer.
+Byte: 8-bit integer.
+Boolean: Represents a boolean value (true or false).
+Char: A single character.
+
+2.Non-primitive Types (Kotlin classes):
+
+String: Represents a sequence of characters.
+Array: Represents an array of values.
+List: An ordered collection of elements.
+Set: A collection of unique elements.
+Map: A collection of key-value pairs.
+
+3.Nullable Types:
+
+Kotlin allows nullable types using ?. For example, Int? represents an integer that can hold either a valid integer or null.
+
+
+val vs. var
+In Kotlin, variables are declared using either val or var, with an important difference between the two:
+
+val: Used for read-only (immutable) variables. Once a val is assigned, it cannot be changed.
+
+var: Used for mutable variables. A var can be reassigned multiple times.
+
+Q.2.What is a lambda expression in Kotlin, and where can it be used?
+
+Functions in Kotlin are first-class constructs and can be treated like data types. Lambda expressions provide a shorthand syntax to write functions. You can pass function types into other functions. You can return a function type from another function.
+
+val lambdaName: (Type) -> ReturnType = { argumentList -> expression }.
