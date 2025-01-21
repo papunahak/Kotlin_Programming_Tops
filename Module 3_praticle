@@ -1,0 +1,28 @@
+
+
+open class Animal {
+    open fun makeSound() {
+        println("Animal Class sound")
+    }
+}
+
+class Dog : Animal() {
+    override fun makeSound() {
+        println("Woof! Woof!")
+    }
+}
+
+class Cat : Animal() {
+    override fun makeSound() {
+        println("Meow! Meow!")
+    }
+}
+
+fun main() {
+    val animals: List<Animal> = listOf(Dog(), Cat(), Animal())
+
+    for (animal in animals) {
+        animal.makeSound()
+    }
+}
+
