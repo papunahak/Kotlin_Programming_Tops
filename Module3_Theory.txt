@@ -1,0 +1,114 @@
+Architecture of Android
+Android is an open-source operating system based on the Linux, designed primarily for mobile devices like smartphones and tablets. Its architecture is layered, consisting of the following key components:
+
+1. Linux
+The foundation of the Android OS.
+Provides low-level system functionality, such as memory management, security, and process management.
+Includes drivers for hardware components like display, camera, and Bluetooth.
+
+
+2. Hardware Abstraction Layer (HAL)
+Acts as an interface between the Android framework and hardware.
+Allows Android to communicate with device hardware (e.g., camera, sensors) without needing direct access to hardware components.
+
+
+3. Native C/C++ Libraries
+Includes open-source libraries such as:
+SQLite (for database management)
+WebKit (for web browsing)
+OpenGL ES (for graphics rendering)
+Media Framework (for playing and recording audio/video)
+
+
+4. Android Runtime (ART)
+Replaces the older Dalvik Virtual Machine (DVM).
+Uses Ahead-of-Time (AOT) compilation for better performance.
+Manages memory and executes applications.
+
+
+5. Application Framework
+Provides high-level APIs used by applications.
+
+
+Key components:
+Activity Manager: Manages the app lifecycle.
+Content Providers: Manages shared app data.
+Location Manager: Handles location-based services.
+Resource Manager: Manages app resources like layouts, strings, and images.
+
+
+6. Applications (User Interface Layer)
+The topmost layer where users interact with installed applications (e.g., phone, messages, browser).
+Apps use APIs provided by the application framework.
+
+
+Key Components of Android
+Activities:
+
+Represents a single screen in an app.
+Handles user interaction.
+Managed via an Activity lifecycle (onCreate(), onStart(), etc.).
+
+Services:
+
+Runs in the background without a UI.
+Used for long-running operations like playing music or fetching data.
+
+Broadcast Receivers:
+
+Listens for system-wide or app-specific broadcasts (e.g., battery low, network change).
+Helps apps respond to external events.
+
+Content Providers:
+
+Allows apps to share data with other apps.
+Uses a structured interface to access databases, files, or the internet.
+
+Q2.Compare Native, Web, and Hybrid applications. What are the advantages and
+disadvantages of each type?
+
+Ans: Compare Native: Developed for a specific platform (Android/iOS).       
+     Web Apps: Run on web browsers and don’t require installation.
+     Hybrid Apps: Combine native and web elements.
+
+Comparison of Native, Web, and Hybrid Applications: Advantages & Disadvantages
+1. Native Applications
+Advantages:
+
+Provide the best performance and speed since they are optimized for a specific platform (Android/iOS).
+Have full access to device features like the camera, GPS, Bluetooth, and sensors.
+Can work offline without needing an internet connection.
+Offer better security since they follow platform-specific security guidelines.
+Deliver a seamless and smooth user experience with high-quality animations and responsiveness.
+Disadvantages:
+
+Expensive and time-consuming to develop since separate versions are needed for Android and iOS.
+Require regular maintenance and updates, which must go through app store approval processes.
+Developers need platform-specific skills (Kotlin/Java for Android, Swift/Objective-C for iOS).
+2. Web Applications
+Advantages:
+
+Work on all devices with a web browser, eliminating the need for separate apps for different platforms.
+No installation required, which saves storage space and simplifies access for users.
+Easier and faster to develop compared to native and hybrid apps.
+Updates can be rolled out instantly without app store approvals.
+More cost-effective since a single codebase runs on all devices.
+Disadvantages:
+
+Limited access to device features like GPS, camera, and push notifications.
+Requires an internet connection to function properly.
+Performance is slower compared to native apps since they run inside a browser.
+The user experience may not feel as smooth or responsive as native applications.
+3. Hybrid Applications
+Advantages:
+
+A single codebase can be used for multiple platforms (Android and iOS), reducing development time and cost.
+Faster to develop than native apps while still providing some native-like functionality.
+Can access some device features through plugins (e.g., Cordova, Capacitor).
+Available in app stores like native apps.
+Disadvantages:
+
+Slower than native apps, especially for graphics-intensive applications.
+The user experience may not be as smooth as fully native apps.
+Performance issues can arise, especially for complex applications that require high responsiveness.
+Dependence on third-party frameworks to access native features, which may not always be up to date.
