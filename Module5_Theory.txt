@@ -1,0 +1,38 @@
+Q.Differences Between SharedPreferences, SQLite, and Room in Android?
+
+SharedPreferences                                       SQLlite                                               Room
+->Stores key-value pairs for simple data persistence.  ->Provides a relational database for structured     ->Provides an abstraction layer over SQLite using                  
+                                                        data storage.                                        an Object Relational Mapping (ORM).
+
+->Key-Value pairs (like a dictionary).                 ->Tables with rows and columns.                     ->Uses Entity classes and DAOs (Data Access 
+                                                                                                             Objects).
+
+->Small amounts data(uses preferences,app settings).   ->Complex, structured data that needs queries       ->Structured data with modern architecture support.
+                                                         and relationships.
+
+->Uses simple key-based retrieval.	              ->Uses SQL queries for CRUD operations.              ->Uses DAO with annotations (@Query, @Insert, 
+                                                                                                             @Delete).
+
+
+Q.When would you choose each for data storage?
+
+1.SharedPreferences (For Simple Key-Value Storage)
+Use when you need to store small amounts of data, such as:
+User preferences (e.g., dark mode enabled/disabled).
+Session management (e.g., storing login state).
+Flags or settings (e.g., app onboarding status).
+
+2.SQLite (For Structured Data with SQL Queries)
+
+Use when you need to store structured relational data, such as:
+Storing user details (name, email, address).
+Caching large datasets locally (e.g., news articles).
+Managing data that requires relationships (e.g., orders and customers).
+
+3.Room Database (For Modern, Efficient Data Handling)
+
+Use when you need a structured database with better performance and maintainability, such as:
+Large local databases with complex relationships.
+Apps that require LiveData integration for real-time updates.
+Apps following MVVM architecture (Model-View-ViewModel).
+
