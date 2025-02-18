@@ -1,0 +1,17 @@
+Q. Differences Between Fragment and Activity:
+
+Activity                                                                       Fragment
+
+->Represents a single screen in an application.                             ->A reusable UI component that is part of an Activity.
+
+->Managed independently by the Android system.                              ->Depends on the host Activity’s lifecycle.
+
+->Not reusable across different Activities.                                 ->Can be reused in multiple Activities or within the same Activity.
+
+->Occupies the entire screen by default.                                    ->Can take up only a part of the screen (ideal for multi-pane layouts).
+
+Q.How does Android handle fragment lifecycle differently from activity lifecycle?
+
+->Fragments depend on the host Activity, meaning when an Activity is destroyed, all its Fragments are also destroyed.
+->A Fragment can be added/removed dynamically while the Activity is running.
+->Fragments provide a more flexible and reusable UI design by supporting multiple panes within the same Activity.
