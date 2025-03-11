@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="16dp">
+
+    <!-- Select Product Image -->
+    <ImageView
+        android:id="@+id/imgProduct"
+        android:layout_width="150dp"
+        android:layout_height="150dp"
+        android:layout_gravity="center"
+        android:scaleType="centerCrop"
+        android:src="@drawable/sample_product"
+        android:background="@android:color/darker_gray"
+        android:padding="8dp"/>
+
+    <!-- Product Name -->
+    <EditText
+        android:id="@+id/etPname"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Enter Product Name"
+        android:padding="10dp"
+        android:background="@android:color/white"/>
+
+    <!-- Product Price -->
+    <EditText
+        android:id="@+id/etPprice"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Enter Product Price"
+        android:inputType="numberDecimal"
+        android:padding="10dp"
+        android:background="@android:color/white"/>
+
+    <!-- Product Description -->
+    <EditText
+        android:id="@+id/etPdesc"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Enter Product Description"
+        android:padding="10dp"
+        android:background="@android:color/white"/>
+
+    <!-- Product Status -->
+    <EditText
+        android:id="@+id/etPstatus"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Active/InActive"
+        android:padding="10dp"
+        android:background="@android:color/white"/>
+
+
+    <!-- Add Product Button -->
+    <Button
+        android:id="@+id/btnAddProduct"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Add Product"
+        android:textColor="@android:color/white"
+        android:padding="12dp"
+        android:layout_marginTop="10dp"/>
+
+</LinearLayout>
